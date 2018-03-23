@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 require_once('db_estacoes.class.php');
 $nome_rua = $_POST['input_pesquisar'];
 

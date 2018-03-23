@@ -1,9 +1,3 @@
-<?php
-
-session_start();
-
-?>
-
 <div class="panel panel-default" style="margin-top: 10px;">
   <div class="panel-body">
 

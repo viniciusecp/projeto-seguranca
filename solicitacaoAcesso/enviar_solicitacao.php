@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 require_once('db_solicitacoes.class.php');
 
 $matricula = base64_encode($_POST['matricula']);

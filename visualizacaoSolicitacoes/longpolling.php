@@ -3,7 +3,16 @@ $loopStart = time();
 $updateAt = 3;
 $loopSeconds = 20;
 
-$pdo = new PDO("mysql:host=localhost;dbname=registro_solicitacoes", "root", "root");
+
+// sudo nano /etc/apache2/envvars
+// export DB_PATH=testanto
+// sudo service apache2 restart
+$output = shell_exec('env | grep DB_PATH');
+$pieces = explode("=", $output);
+$db_path = trim($pieces[1]);
+
+
+$pdo = new PDO("mysql:host=$db_path;dbname=registro_solicitacoes", "root", "root");
 
 if(isset($_POST["timestamp"])){
 	$timestamp = $_POST["timestamp"];
